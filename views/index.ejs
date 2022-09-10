@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h3 class="all-users-header">Добавленные пользователи:</h3>
+  <div class="all-users">
+    <% param.forEach(function(item) { %>
+      <!-- <div class="all-users-box"> -->
+        <ul class="user-info">
+          <li class="id_get-one-user"><%= item.id %></li>
+          <li><%= item.name %></li>
+          <li><%= item.surname %></li>
+        </ul>
+      <!-- </div> -->
+    <% }) %>
+  </div>
+  
+  <div class="forms">
+    <form action="<% url %>" method="post">
+      <h2 class="form-header">Добавить:</h2>
+      <div>
+        <input placeholder="name" name="name">
+      </div>
+      <div>
+        <input placeholder="surname" name="surname">
+      </div>
+      <div>
+        <button class="btn-submit">Create</button>
+      </div>
+    </form>
+
+    <form>
+      <h2 class="form-header">Найти:</h2>
+      <div>
+        <input placeholder="id" type="number" name="id" id="read_id">
+      </div>
+      <div>
+        <button class="btn-submit" onclick="READ()">Read</button>
+      </div>
+    </form>
+
+    <form>
+      <h2 class="form-header">Изменить:</h2>
+      <div>
+        <input placeholder="id" name="id" type="number" id="put_id">
+      </div>
+      <div>
+        <input placeholder="name" name="name" id="put_name">
+      </div>
+      <div>
+        <input placeholder="surname" name="surname" id="put_surname">
+      </div>
+      <div>
+        <button class="btn-submit" onclick="PUT()">Update</button>
+      </div>
+    </form>
+
+    <form>
+      <h2 class="form-header">Удалить:</h2>
+      <div>
+        <input placeholder="id" type="number" id="delete_id">
+      </div>
+      <div>
+        <button class="btn-submit" onclick="DELETE()">Delete</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+<script>
+  function DELETE() {
+    const delete_id = document.querySelector('#delete_id')
+    fetch(`<% url %>/${delete_id.value}`, {
+      method: 'DELETE',
+    })
+    console.log('ID_VALUE:', delete_id.value)
+  }
+
+  function PUT() {
+    const put_id = document.querySelector('#put_id')
+    const put_name = document.querySelector('#put_name')
+    const put_surname = document.querySelector('#put_surname')
+
+    fetch(`<% url %>/${put_id.value}&${put_name.value}&${put_surname.value}`, {
+      method: 'PUT',
+    })
+    console.log('PUT:', put_id.value, put_name.value, put_surname.value)
+  }
+
+  function READ() {
+    const read_id = document.querySelector('#read_id')
+    const user_id = document.querySelector('.id_get-one-user')
+    fetch(`<% url %>/${read_id.value}`, {
+      method: 'GET',
+    })
+  }
+</script>

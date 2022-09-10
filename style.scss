@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+$sides: 10%;
+
+body {
+  margin: 0 $sides;
+  background-color: rgb(108, 127, 158);
+  padding-top: 50px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.all-users-header {
+  text-align: center;
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+
+.all-users {
+  color:azure;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  border: thick double #0f2027;
+  margin-bottom: 3em;
+
+    .user-info{
+      list-style: none;
+      display: flex;
+      margin-top: 0.8em;
+      border-bottom: solid 1px #2d4145;
+
+      li:first-child{
+        font-weight: bold;
+        margin-right: 0.6em;
+      }
+      li:last-child{
+        margin-left: 0.3em;
+      }
+      li:not(:first-child){
+        color:rgb(175, 246, 255)
+      }
+    }
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  form {
+    padding: 0.5em;
+    display: grid;
+    border: solid rgb(39, 47, 48);
+    background-color: #547981;
+    box-shadow: 1px 1px 3px #213033;
+    grid-template-rows: 1.3fr, 1fr, 1fr, 1fr, 0.7fr;
+
+    div:not(:last-child) {
+      margin-top: 0.5em;
+      border: solid 2px;
+      border-radius: 5px;
+      align-self: center;
+
+      input {font-size:medium;}
+    }
+
+    div:last-child {
+      grid-row: 5;
+      justify-self: center;
+      align-self: end;
+    }
+
+    .form-header {
+      color: rgb(0, 25, 32);
+      text-align: center;
+    }
+
+    .btn-submit {
+      background-color: rgb(255, 153, 116);
+      padding: 0.5em 1em;
+      margin-top: 1em;
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: coral;
+        font-weight: bold;
+      }
+    }
+  }
+}
