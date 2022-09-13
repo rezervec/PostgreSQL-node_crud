@@ -2,7 +2,7 @@
 
 :black_small_square:
 
-#### Установка:
+### Установка:
 ---
 ###### Скачиваем проект.
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -23,7 +23,7 @@
 
 :black_small_square:
 
-#### Функционал:
+### Функционал:
 ---
 - __CREATE__ – пишем **имя** и **фамилию** пользователя, которого нужно добавить.  
 Запрос:
