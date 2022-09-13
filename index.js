@@ -6,7 +6,7 @@ const YourUrl = require('./url.js')
 const app = express()
 app.use(express.json())
 app.set('view engine', 'ejs')
-app.use('/css', express.static('css'))
+app.use('/static', express.static('static'))
 
 app.use('/', userRouter)
 
