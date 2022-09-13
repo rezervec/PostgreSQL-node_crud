@@ -21,16 +21,16 @@
 #### Функционал:
 - __CREATE__ – пишем **имя** и **фамилию** пользователя, которого нужно добавить.  
 Запрос:
-- ```INSERT INTO person (name, surname) values ('Nicolas', 'Tesla');```
+ - ```INSERT INTO person (name, surname) values ('Nicolas', 'Tesla');```
 
 - __READ__ – пишем **id** пользователя, которого нужно найти.  
 Запрос:
-- ```SELECT * FROM person where id = 1;```
+ - ```SELECT * FROM person where id = 1;```
 
 - __UPDATE__ – пишем **id** старого и **имя**, **фамилию** нового пользователя.  
 Запрос:
-- ```UPDATE person set name = 'Thomas', surname = 'Edison' where id = 1;```
+ - ```UPDATE person set name = 'Thomas', surname = 'Edison' where id = 1;```
 
 - __DELETE__ – пишем **id** пользователя, которого хотим удалить.  
 Запрос:
-- ```DELETE FROM person where id = 1;```
+ - ```DELETE FROM person where id = 1;```
