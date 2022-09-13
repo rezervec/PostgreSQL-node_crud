@@ -12,9 +12,9 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 1. ``` create database node_app_postgres; ``` *('node_app_postgres' - название БД)*
 2. Редактируем файл проекта ```db.js```:
-  -- password: *"ваш пароль от Postgres"*
-  -- port: *"ваш порт Postgres"*
-  -- database: *"имя созданной БД"*
+- password: *"ваш пароль от Postgres"*
+- port: *"ваш порт Postgres"*
+- database: *"имя созданной БД"*
 3. В ```url.js``` выбираем порт, на котором будет открываться наше приложение.
 4. ```npm run server```
 ---
