@@ -40,3 +40,7 @@
 - __DELETE__ – пишем **id** пользователя, которого хотим удалить.  
 Запрос:
     - ```DELETE FROM person where id = 1;```
+
+---
+
+![Screenshot](https://github.com/rezervec/PostgreSQL-node_crud/raw/master/screenshots/screen1.jpg)
